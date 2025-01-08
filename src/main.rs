@@ -1,7 +1,11 @@
-const MAYORIA_DE_EDAD: u8 = 18; // Las constantes necesitan ser definidas
+// Declara una variable estática global
+
+static GLOBAL_VARIABLE: u8 = 42;
 
 fn main() {
-    println!("En este país la mayoría de edad es {MAYORIA_DE_EDAD}");
+    // Accede a la variable global
+
+    println!("La variable global es {GLOBAL_VARIABLE}");
 }
 
 
