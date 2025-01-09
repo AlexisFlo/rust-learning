@@ -1,12 +1,10 @@
-// Declara una variable estática global
-
-static GLOBAL_VARIABLE: u8 = 42;
-
 fn main() {
-    // Accede a la variable global
+    let verdareo = 1;
 
-    println!("La variable global es {GLOBAL_VARIABLE}");
+    println!("El valor de verdadero es {verdareo}");
+
+    let verdareo = true;
+    println!("El valor de verdadero es {verdareo}");
+
 }
-
-
 
