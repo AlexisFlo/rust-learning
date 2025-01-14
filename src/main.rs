@@ -1,6 +1,6 @@
 fn main() {
-    let mi_letra: char = 'A';
-    
+    let mi_nombre = "Alexis";
+    let lexis = &mi_nombre[1..];
 
-    println!("La inicial de mi nombre es {mi_letra}");
+    println!("lexis: {lexis}");
 }
