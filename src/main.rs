@@ -1,17 +1,11 @@
 fn main() {
-    // [] -> Primitivos
+    // Memoria RAM
+    // Stack | Heap
+    // Stack -> primitives (i32, str, bool, punteros) | ventajas: es más rapido para lectura
+    // Heap -> estructuras más complejas (Vec, HashMap, String) | desventaja: es más rápido para datos complejos
 
-    let mut lista_vacia: Vec<i32> = Vec::with_capacity(5);
+    // Se crea en el Heap el vector pero además se guarda la dirección de memoria del heap en el stack
 
-    lista_vacia.push(1);
-    lista_vacia.push(2);
-    lista_vacia.push(3);
-    lista_vacia.push(4);
-    lista_vacia.push(5);
-
-    println!("Lista vacía: {lista_vacia:?}, {}, {}", lista_vacia.len(), lista_vacia.capacity());
-    lista_vacia.push(6);
-
-    println!("Lista vacía: {lista_vacia:?}, {}, {}", lista_vacia.len(), lista_vacia.capacity());
+    let mi_vec: Vec<i32> = Vec::new();
 }
 
