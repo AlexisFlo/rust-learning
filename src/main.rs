@@ -1,6 +1,9 @@
 fn main() {
-    let mi_nombre = "Alexis";
-    let lexis = &mi_nombre[1..];
 
-    println!("lexis: {lexis}");
+    let mi_arreglo = [73, 25, 34, 42, 55];
+
+    let otro_arreglo = mi_arreglo;
+
+    println!("{:?} {:?}", mi_arreglo, otro_arreglo);
 }
+
