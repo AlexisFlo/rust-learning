@@ -1,15 +1,17 @@
 fn main() {
+    // [] -> Primitivos
 
-    let mut mi_vec = vec![1,2,3,4,5];
-    let mut lista_de_nombres = vec!["Alexis", "Arturo", "Alan"];
+    let mut lista_vacia: Vec<i32> = Vec::with_capacity(5);
 
-    println!("Mis valores: {mi_vec:?}");
-    println!("Lista de nombres: {lista_de_nombres:?}");
+    lista_vacia.push(1);
+    lista_vacia.push(2);
+    lista_vacia.push(3);
+    lista_vacia.push(4);
+    lista_vacia.push(5);
 
-    mi_vec.push(7);
-    lista_de_nombres.push("Anayeli");
+    println!("Lista vacía: {lista_vacia:?}, {}, {}", lista_vacia.len(), lista_vacia.capacity());
+    lista_vacia.push(6);
 
-    println!("Mis valores: {mi_vec:?}");
-    println!("Lista de nombres: {lista_de_nombres:?}");
+    println!("Lista vacía: {lista_vacia:?}, {}, {}", lista_vacia.len(), lista_vacia.capacity());
 }
 
