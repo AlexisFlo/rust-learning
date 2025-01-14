@@ -1,9 +1,7 @@
 fn main() {
 
-    let mi_arreglo = [73, 25, 34, 42, 55];
+    let mi_tupla = ("Alexis", 24, true);
 
-    let otro_arreglo = mi_arreglo;
-
-    println!("{:?} {:?}", mi_arreglo, otro_arreglo);
+    println!("Mi nombre es: {}", mi_tupla.0);
 }
 
