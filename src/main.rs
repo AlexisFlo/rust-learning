@@ -1,11 +1,15 @@
 fn main() {
-    // Memoria RAM
-    // Stack | Heap
-    // Stack -> primitives (i32, str, bool, punteros) | ventajas: es más rapido para lectura
-    // Heap -> estructuras más complejas (Vec, HashMap, String) | desventaja: es más rápido para datos complejos
+    // &str, Stack, &[char;n] | &[u8;n]
+    // String, Heap, Vec<u8>, Dereferencia a &str
 
-    // Se crea en el Heap el vector pero además se guarda la dirección de memoria del heap en el stack
+    let mut mi_nombre = "Alexis".to_string();
 
-    let mi_vec: Vec<i32> = Vec::new();
+    mi_nombre.push_str(" Flores");
+
+    let texto_formateado = format!(" eres el usuario número {}", 73);
+
+    mi_nombre.push_str(&texto_formateado);
+
+    println!("{mi_nombre}");
 }
 
