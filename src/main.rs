@@ -1,13 +1,14 @@
 fn main() {
     // Switch
     
+    let tengo_hambre = true;
+    let hay_comida = false;
 
-    let mi_tupla = ("hola", 10);
-    match mi_tupla {
-        (_,1..=4) => println!("Entra en el caso nro 1 al 4 sin importar el texto"),
-        ("hola", 5..=12) => println!("Esta entre el 5 y el 12 y dice hola"), 
-        ("hola", _) => println!("Nos interesa verificar si dice hola, no nos importa el numero"), 
-        _ => todo!()
+    match (tengo_hambre, hay_comida) {
+        (true, true) => println!("Voy a comer algo"),
+        (false, true) => println!("Hay comida pero no tengo hambre"), 
+        (true, false) => println!("Tengo hambre pero no hay comida!!"), 
+        _ => println!("Pido delivery")
     }
     
 }
