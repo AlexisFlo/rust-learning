@@ -1,15 +1,15 @@
 fn main() {
-    // Switch
-    
-    let tengo_hambre = true;
-    let hay_comida = false;
+    let mi_lista_de_usuarios = vec![
+        ("Alexis", "Flores"),
+        ("Karla", "Garcia"),
+        ("Arturo", "Pascual"),
+        ("Alexa", "Gomez"),
+    ];
 
-    match (tengo_hambre, hay_comida) {
-        (true, true) => println!("Voy a comer algo"),
-        (false, true) => println!("Hay comida pero no tengo hambre"), 
-        (true, false) => println!("Tengo hambre pero no hay comida!!"), 
-        _ => println!("Pido delivery")
+    // foreach
+    for (indice, (nombre, apellido)) in mi_lista_de_usuarios.iter().enumerate() {
+        println!("El numero del usuario es {indice}");
+        println!("El nombre y apellido del usuario es {nombre} {apellido}");
     }
-    
 }
 
