@@ -1,15 +1,11 @@
 fn main() {
-    let mi_lista_de_usuarios = vec![
-        ("Alexis", "Flores"),
-        ("Karla", "Garcia"),
-        ("Arturo", "Pascual"),
-        ("Alexa", "Gomez"),
-    ];
-
-    // foreach
-    for (indice, (nombre, apellido)) in mi_lista_de_usuarios.iter().enumerate() {
-        println!("El numero del usuario es {indice}");
-        println!("El nombre y apellido del usuario es {nombre} {apellido}");
+    let x = 5;
+    let x = x + 1;
+    {
+        let x = x * 2;
+        println!("El valor de x en el contexto interno es: {x}"); 
     }
+    println!("El valor de x en el contexto externo es: {x}");
 }
+
 
