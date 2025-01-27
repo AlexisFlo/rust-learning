@@ -1,22 +1,18 @@
+
 fn main() {
-    // Refinamiento de Tipos
-    let spaces = "  ";
-    let spaces = spaces.len();
-    println!("Longitud de la cadena: {spaces}");
+    let a: i32 = -42;
+    let b: i32 = 56;
+    
+    println!("Valor absoluto de a: {}", a.abs());
+    println!("a como cadena: {}", a.to_string());
+    println!("número de bits en 1 en b: {}", b.count_ones());
+    println!("Número de bits en 0 en b: {}", b.count_zeros());
 
-    // Transformaciones intermedias
-    let price = 100;
-    let price = price * 2;
-    let price = price - 10;
-    println!("The price is: {price}");
+    let (sum, overflowed) = a.overflowing_add(b);
+    println!("Suma con posible desbordamiento: {} (desbordado: {})", sum, overflowed);
 
-    // Evitar mutabilidad
-    // let mut count = 1;
-    // count += 1;
-    // se puede escribir como ->
-    let count = 1;
-    let count = count + 1;
-    println!("The count is in: {count}");
+    let wrapped_sum = a.wrapping_add(b);
+    println!("Suma con desbordamiento envuelto: {}", wrapped_sum);
 }
-// doing a web server 
+
  
