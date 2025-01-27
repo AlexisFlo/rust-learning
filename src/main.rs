@@ -1,18 +1,16 @@
 
 fn main() {
-    let a: i32 = -42;
-    let b: i32 = 56;
-    
-    println!("Valor absoluto de a: {}", a.abs());
-    println!("a como cadena: {}", a.to_string());
-    println!("número de bits en 1 en b: {}", b.count_ones());
-    println!("Número de bits en 0 en b: {}", b.count_zeros());
+    let saludo: &str = "Hola, mundo!";
 
-    let (sum, overflowed) = a.overflowing_add(b);
-    println!("Suma con posible desbordamiento: {} (desbordado: {})", sum, overflowed);
+    println!("Longitud: {}", saludo.len());
+    println!("¿Esta vacío? {}", saludo.is_empty());
+    println!("¿Contine 'mundo'? {}", saludo.contains("mundo"));
 
-    let wrapped_sum = a.wrapping_add(b);
-    println!("Suma con desbordamiento envuelto: {}", wrapped_sum);
+    for parte in saludo.split(", ") {
+        println!("Parte: {}", parte);
+    }
+
+    println!("En mayúsculas: {}", saludo.to_uppercase());
 }
 
  
