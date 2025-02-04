@@ -28,7 +28,21 @@ struct Color {
     blue: u8,
 }
 
+// Add an implementation of the fmt::Display trait for the Color struct above so that the output displays as:
+/*
 
+RGB (128, 255, 90) 0x80FF5A
+RGB (0, 3, 254) 0x0003FE
+RGB (0, 0, 0) 0x000000
+*/
+
+impl Display for Color {
+    fn fmt(&self, f: &mut Formatter<'_>) -> fmt::Result {
+        write!(f, "RGB({}, {}, {}) 0x{:02X}{:02X}{:02X}",
+            self.red, self.green, self.blue, self.red, self.green, self.blue
+        )
+    }
+}
 
 fn main() {
     for city in [
